@@ -25,7 +25,7 @@
 
 
   .auth-layout {
-    height: 690px;
+    height: 100vH;
     margin: 0;
 
     .main {

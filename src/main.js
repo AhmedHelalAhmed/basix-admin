@@ -5,6 +5,15 @@ import VueRouter from 'vue-router';
 import { routes } from './router/routes';
 import { index } from './components/index';
 
+
+// Form Wizard
+import VueFormWizard from 'vue-form-wizard'
+Vue.use(VueFormWizard)
+
+// Table
+import Vuetable from 'vuetable-2'
+Vue.use(Vuetable)
+
 // Router
 Vue.use(VueRouter);
 const router = new VueRouter({
@@ -21,5 +30,3 @@ new Vue({
   render: h => h(App),
   components: { App }
 })
-
-

@@ -1,5 +1,5 @@
 <template>
-    <div class="badges">
+    <div class="badges row">
         <div class="col-lg-6">
 
             <div class="card">
@@ -71,14 +71,14 @@
                         <span class="badge badge-info">Info</span>
                         <span class="badge badge-light">Light</span>
                         <span class="badge badge-dark">Dark</span>
-
-
                     </div>
                 </div>
-
         </div>
-
-
-
     </div>
 </template>
+
+<style lang="scss" scoped>
+    .card button{
+        margin-bottom: 8px;
+    }
+</style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="card" :class="{'no-header': !headerText}">
+    <div class="card" :class="{'noheader': !headerText}">
         <div class="card-header">
             <i :class="headerIcon" v-if="headerIcon" class="mr-2"></i>
           <strong class="card-title" v-if="headerText">{{headerText}}</strong>
@@ -17,7 +17,7 @@
 
 <script>
   export default {
-    name: 'basix-card',
+    name: 'card-template',
 
     props: [
         'headerIcon',
@@ -29,7 +29,7 @@
 </script>
 
 <style scoped>
-    .no-header .card-header{
+    .noheader .card-header{
         display: none;
     }
 </style>

@@ -39,9 +39,18 @@ export default {
           icon: 'fa fa-id-badge'
         },
         {
+          name: 'Social Buttons',
+          url: '/components/socials',
+          icon: 'fa fa-share-square-o',
+          badge: {
+            variant: 'success',
+            text: 'NEW'
+          }          
+        },
+        {
           name: 'Cards',
           url: '/components/cards',
-          icon: 'fa fa-id-card-o'
+          icon: 'fa fa-id-card-o'          
         },
         {
           name: 'Alerts',
@@ -49,9 +58,24 @@ export default {
           icon: 'fa fa-exclamation-triangle'
         },
         {
+          name: 'Progress Bars',
+          url: '/components/progressbars',
+          icon: 'fa fa-spinner'
+        },
+        {
+          name: 'Modals',
+          url: '/components/modals',
+          icon: 'fa fa-fire'
+        },
+        {
           name: 'Grids',
           url: '/components/grids',
           icon: 'fa fa-th'
+        },
+        {
+          name: 'Typography',
+          url: '/components/typography',
+          icon: 'fa fa-file-word-o'
         }
       ]
     },
@@ -74,7 +98,13 @@ export default {
                   text: 'NEW'
                 }
             }
+
       ]
+    },
+    {
+      name: 'Icons',
+      url: '/components/icons',
+      icon: 'fa fa-star',
     },
     {
       name: 'Widgets',
@@ -95,35 +125,16 @@ export default {
       },
       children: [
                   {
-                    name: 'Line Chart',
-                    url: '/components/charts/linechart',
+                    name: 'Chart JS',
+                    url: '/components/chartjs',
                     icon: 'fa fa-line-chart'
                   },
                   {
-                    name: 'Bar Chart',
-                    url: '/components/charts/barchart',
-                    icon: 'fa fa-bar-chart'
+                    name: 'Flot Chart',
+                    url: '/components/flotchart',
+                    icon: 'fa fa-line-chart'
                   },
-                  {
-                    name: 'Doughnut Chart',
-                    url: '/components/charts/doughnut',
-                    icon: 'fa fa-pie-chart'
-                  },
-                  {
-                    name: 'Radar Chart',
-                    url: '/components/charts/radar',
-                    icon: 'fa fa-pie-chart'
-                  },
-                  {
-                    name: 'Pie Chart',
-                    url: '/components/charts/piechart',
-                    icon: 'fa fa-pie-chart'
-                  },
-                  {
-                    name: 'Polar Area Chart',
-                    url: '/components/charts/polar',
-                    icon: 'fa fa-area-chart'
-                  },
+                  
         ]
     },
     {
@@ -193,13 +204,13 @@ export default {
     },
     {
       name: 'Documentation',
-      url: 'http://vuejsadmin.com/documentation/',
+      url: 'https://docs.vuejsadmin.com/docs/basix-admin-free-vuejs-admin-template/',
       icon: 'fa fa-file-text-o',
       variant: 'danger'
     },
     {
       name: 'Purchase',
-      url: 'https://themeforest.net/item/basix-admin-vuejs-bootstrap-admin-dashboard-template/20838455?ref=litonice09',
+      url: 'https://vuejsadmin.com',
       icon: 'fa fa-shopping-cart',
       class: 'mt-auto',
       variant: 'success'

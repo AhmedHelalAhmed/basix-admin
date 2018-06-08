@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
+    publicPath: 'dist/',
     filename: 'build.js'
   },
   module: {
@@ -26,20 +26,13 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: "style-loader!css-loader?sourceMap"
-        //loader: "style-loader!css-loader?sourceMap"
+        use: [
+          'vue-style-loader',
+          'css-loader'
+        ],
       },
       { test: /vendor\/.+\.(jsx|js)$/,
         loader: 'imports?jQuery=jquery,$=jquery,this=>window'
-      },
-      {
-        test: /\.(html)$/,
-        use: {
-          loader: 'html-loader',
-          options: {
-            attrs: [':data-src']
-          }
-        }
       },
       {
           test: /\.scss$/,
@@ -59,13 +52,19 @@ module.exports = {
           }]
       },
       {
+        test: /\.sass$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'sass-loader?indentedSyntax'
+        ],
+      },
+      {
         test: /\.js$/,
         loader: 'babel-loader',
-      //  include: [resolve('src'), resolve('test')],
         exclude: /node_modules/
       },
       {
-        //test: /\.(png|jpg|gif|svg)$/,
         test: /.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
         loader: 'file-loader',
         options: {
@@ -76,15 +75,15 @@ module.exports = {
   },
   resolve: {
     alias: {
-      //extensions: ['.js', '.vue', '.json'],
       'vue$': 'vue/dist/vue.esm.js',
-     // '@': resolve('src'),
       'jquery': 'jquery/src/jquery.js'
-    }
+    },
+    extensions: ['*', '.js', '.vue', '.json']
   },
   devServer: {
     historyApiFallback: true,
-    noInfo: true
+    noInfo: true,
+    overlay: true
   },
   performance: {
     hints: false
@@ -104,7 +103,7 @@ if (process.env.NODE_ENV === 'production') {
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: true,
       compress: {
-        warnings: true
+        warnings: false
       }
     }),
     new webpack.LoaderOptionsPlugin({
@@ -112,16 +111,9 @@ if (process.env.NODE_ENV === 'production') {
     }),
 
     new webpack.ProvidePlugin({
-      Alert: "exports?Alert!bootstrap/js/dist/alert",
-      Button: "exports?Button!bootstrap/js/dist/button",
-      Collapse: "exports?Collapse!bootstrap/js/dist/collapse",
-      Dropdown: "exports?Dropdown!bootstrap/js/dist/dropdown",
-      Modal: "exports?Modal!bootstrap/js/dist/modal",
-      Popover: "exports?Popover!bootstrap/js/dist/popover",
-      Scrollspy: "exports?Scrollspy!bootstrap/js/dist/scrollspy",
-      Tab: "exports?Tab!bootstrap/js/dist/tab",
-      Tooltip: "exports?Tooltip!bootstrap/js/dist/tooltip",
-      Util: "exports?Util!bootstrap/js/dist/util",
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery",
     })
 
   ])

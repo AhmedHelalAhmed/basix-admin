@@ -1,5 +1,5 @@
 <template>
-    <div class="buttons">
+    <div class="buttons row">
 
         <!-- Left Block -->
         <div class="col-md-6">

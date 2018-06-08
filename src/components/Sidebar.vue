@@ -1,15 +1,12 @@
 <template>
-        <!-- Left Panel -->
 
     <aside id="left-panel" class="left-panel">
-
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-sm navbar-default">
 
             <SidebarHeader/>
 
-            <div id="main-menu" class="main-menu collapse navbar-collapse" role="navigation">
-
-                <ul class="navbar-nav">
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
 
                     <template v-for="(item, index) in navItems">
                         <template v-if="item.title">
@@ -47,19 +44,15 @@
                             </template>
                         </template>
                     </template>
+
+
                 </ul>
-                <slot></slot>
             </div><!-- /.navbar-collapse -->
         </nav>
-
-        <SidebarFooter />
-
     </aside><!-- /#left-panel -->
 
-    <!-- Left Panel -->
-
-
 </template>
+
 
 
 <script>
@@ -92,14 +85,8 @@ export default{
     methods: {
         handleClick (e) {
           e.preventDefault()
-          e.target.parentElement.classList.toggle('open')
+          e.target.parentElement.classList.toggle('show')
       }
     }
 }
 </script>
-
-<style lang="css">
-  .nav-link {
-    cursor:pointer;
-  }
-</style>

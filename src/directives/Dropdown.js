@@ -1,4 +1,7 @@
-export default {
+import Vue from 'vue';
+
+Vue.directive('dropdown', {
+
   bind: function (el, binding) {
     let ddToggle = el.querySelector('.dropdown-toggle')
     let ddMenu = el.querySelector('.dropdown-menu')
@@ -20,4 +23,5 @@ export default {
       }
     })
   }
-}
+
+});

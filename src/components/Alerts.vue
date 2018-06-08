@@ -80,27 +80,27 @@
               <div class="card-body">
                   <basix-alert type="success" :withCloseBtn="true">
                     <span class="badge badge-pill badge-success">Success</span>
-                    You successfully read this important alert message.
+                    You successfully read this important alert.
                   </basix-alert>
                   <basix-alert type="primary" :withCloseBtn="true">
                     <span class="badge badge-pill badge-primary">Success</span>
-                    You successfully read this important alert message.
+                    You successfully read this important alert.
                   </basix-alert>
                   <basix-alert type="secondary" :withCloseBtn="true">
                     <span class="badge badge-pill badge-secondary">Secondary</span>
-                    You successfully read this important alert message.
+                    You successfully read this important alert.
                   </basix-alert>
                   <basix-alert type="warning" :withCloseBtn="true">
                     <span class="badge badge-pill badge-warning">Warning</span>
-                    You successfully read this important alert message.
+                    You successfully read this important alert.
                   </basix-alert>
                   <basix-alert type="danger" :withCloseBtn="true">
                     <span class="badge badge-pill badge-danger">Danger</span>
-                    You successfully read this important alert message.
+                    You successfully read this important alert.
                   </basix-alert>
                   <basix-alert type="info" :withCloseBtn="true">
                     <span class="badge badge-pill badge-info">Info</span>
-                    You successfully read this important alert message.
+                    You successfully read this important alert.
                   </basix-alert>
               </div>
           </div>

@@ -181,11 +181,12 @@
       <div class="col-md-12">
         <card header-text="Search & Pagination">
           <data-table :apiUrl="apiUrl"
-                      :tableFields="tableFields"
-                      :itemsPerPage="itemsPerPage"
-                      :sortFunctions="sortFunctions"
-                      :apiMode="apiMode"
-                      :paginationPath="paginationPath"></data-table>
+              :tableFields="tableFields"
+              :itemsPerPage="itemsPerPage"
+              :sortFunctions="sortFunctions"
+              :apiMode="apiMode"
+              :paginationPath="paginationPath"
+          ></data-table>
         </card>
       </div>
     </div>
@@ -193,32 +194,35 @@
   </div>
 </template>
 
-<script>
-    import DataTable from './vuetable-2/VuesticDataTable.vue'
-    import BadgeColumn from './BadgeColumn.vue'
+
+<script>    
     import Vue from 'vue'
+
+    import DataTable from './vuetable-2/DataTable.vue'
+    import BadgeColumn from './BadgeColumn.vue'
+    
     Vue.component('badge-column', BadgeColumn);
 
     import FieldsDef from './vuetable-2/data/fields-definition';
     import ItemsPerPageDef from './vuetable-2/data/items-per-page-definition';
 
     export default {
+        name: 'Table',
         components: {
           DataTable
-      },
-      name: 'Table',
-      data () {
-          return {
-            apiUrl: 'https://vuetable.ratiw.net/api/users',
-            apiMode: true,
-            tableFields: FieldsDef.tableFields,
-            itemsPerPage: ItemsPerPageDef.itemsPerPage,
-            sortFunctions: FieldsDef.sortFunctions,
-            paginationPath: ''
+        },
+        
+        data () {
+            return {
+              apiUrl: 'https://vuetable.ratiw.net/api/users',
+              apiMode: true,
+              tableFields: FieldsDef.tableFields,
+              itemsPerPage: ItemsPerPageDef.itemsPerPage,
+              sortFunctions: FieldsDef.sortFunctions,
+              paginationPath: ''
+          }
         }
     }
-}
-
 </script>
 
 <style lang="scss">

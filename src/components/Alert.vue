@@ -2,7 +2,7 @@
   <transition name="fade">
     <div class='basix-alert alert' :class="alertClass" v-if="!hidden">
         <slot></slot>
-        <i class="fa fa-close alert-close float-right align-top" v-if="withCloseBtn" @click="hide()" ></i>
+        <i class="fa fa-close alert-close float-right align-text-top" v-if="withCloseBtn" @click="hide()" ></i>
     </div>
   </transition>
 </template>

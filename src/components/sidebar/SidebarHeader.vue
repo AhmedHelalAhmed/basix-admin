@@ -1,17 +1,30 @@
 <template>
 
-	<div class="navbar-header" @click="handleSidebarToggle">
-        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
-        </button> -->
-        <button @click="mainmenuToggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="navbar-header" @click="handleSidebarToggle">
+        <button
+            @click="mainmenuToggle"
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#main-menu"
+            aria-controls="main-menu"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
             <i class="fa fa-bars"></i>
         </button>
+        <router-link to="/" class="navbar-brand" exact>
+            <img src="../../images/logo.png" alt="Logo">
+        </router-link>
 
+        <router-link to="/" class="navbar-brand hidden">
+            <img src="../../images/logo2.png" alt="Logo">
+        </router-link>
 
-        <router-link to="/" class="navbar-brand invisible-xs" exact><img class="float-left" src="../../images/logo.png" alt="Logo"></router-link>
-        <router-link to="/" class="navbar-brand d-md-none" ><img src="../../images/logo2.png" alt="Logo"></router-link>
+        <sidebar-collapse></sidebar-collapse>
+
     </div>
+
 </template>
 <script>
 
