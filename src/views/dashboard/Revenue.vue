@@ -4,8 +4,7 @@
             <div class="card-top">
                 <h4 class="card-title m-0 float-left">Revenue</h4><!-- /.content-title -->
                 <div 
-                    class="action-menu dropdown float-right"  
-                    v-dropdown="{autoClose: true}"
+                    class="action-menu dropdown float-right" 
                 >
                     <button class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-ellipsis-v"></i>
@@ -60,15 +59,10 @@
 
 <script>
     import RevenueChart from './charts/RevenueChart.vue';
-    import Dropdown from '../../directives/Dropdown';
 
     export default{
         components:{
-            RevenueChart,
-            Dropdown
-        },
-        directives: {
-            dropdown: Dropdown
+            RevenueChart
         }
     }
 

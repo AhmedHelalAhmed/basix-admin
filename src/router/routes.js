@@ -30,8 +30,6 @@ const FlotChart = resolve => { require.ensure(['../components/charts/FlotChart.v
 //Maps
 const GoogleMapsPage = resolve => { require.ensure(['../components/maps/google-maps/GoogleMapsPage.vue'], ()=>{ resolve(require('../components/maps/google-maps/GoogleMapsPage.vue')); }); };
 const LeafletMapsPage = resolve => { require.ensure(['../components/maps/leaflet-maps/LeafletMapsPage.vue'], ()=>{ resolve(require('../components/maps/leaflet-maps/LeafletMapsPage.vue')); }); };
-const BubbleMapsPage = resolve => { require.ensure(['../components/maps/bubble-maps/BubbleMapsPage.vue'], ()=>{ resolve(require('../components/maps/bubble-maps/BubbleMapsPage.vue')); }); };
-const LineMapsPage = resolve => { require.ensure(['../components/maps/line-maps/LineMapsPage.vue'], ()=>{ resolve(require('../components/maps/line-maps/LineMapsPage.vue')); }); };
 
 
 // // User Info
@@ -123,21 +121,9 @@ export const routes = [
                 path: '/components/maps/leaflet-maps',
                 component: LeafletMapsPage,
                 name: 'leaflet-maps-page'
-            },
-            {
-                path: '/components/maps/bubble-maps',
-                component: BubbleMapsPage,
-                name: 'bubble-maps-page'
-            },
-            {
-                path: '/components/maps/line-maps',
-                component: LineMapsPage,
-                name: 'line-maps-page'
-            },
-
+            }
         ]
     },
-
     {
         path : '/components/auth',
         name: 'auth',

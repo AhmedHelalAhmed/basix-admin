@@ -21,16 +21,11 @@
 </template>
 
 <script>
-import Dropdown from '../../directives/Dropdown';
-
 export default {
   data (){
     return{
       isShow: false
     }
-  },
-  components:{
-    Dropdown
   },
   props: {
     name: {
@@ -56,9 +51,6 @@ export default {
       //e.target.parentElement.classList.toggle('show')
       this.isShow = !this.isShow;
     }
-  },
-  directives: {
-    dropdown: Dropdown
   }
 }
 </script>

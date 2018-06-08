@@ -3,10 +3,7 @@
         <div class="card">
             <div class="card-top">
                 <h4 class="card-title m-0 float-left">Download</h4><!-- /.content-title -->
-                <div 
-                    class="action-menu dropdown float-right"  
-                    v-dropdown="{autoClose: true}"
-                >
+                <div class="action-menu dropdown float-right">
                     <button class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-ellipsis-v"></i>
                     </button>

@@ -15,13 +15,8 @@
 </template>
 
 <script>
-  import Dropdown from '../../../../directives/Dropdown';
-
   export default {
     name: 'vuetable-pagination',
-    directives: {
-      Dropdown
-    },
     props: {
       options: {
         type: Array,

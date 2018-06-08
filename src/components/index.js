@@ -12,8 +12,6 @@ import Tables from './tables/Tables.vue'
 import ProgressBars from './ProgressBars.vue'
 import BootstrapProgressBar from './progressbar/BootstrapProgressBar.vue'
 
-//import Tabs from './Tabs.vue'
-
 
 //Importing Custom Components
 import SidebarCollapse from './sidebar/SidebarCollapse.vue';

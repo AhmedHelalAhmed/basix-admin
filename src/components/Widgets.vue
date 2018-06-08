@@ -335,7 +335,6 @@
     import InfoChartTwo from '../views/dashboard/InfoBoxChart2.vue';
 
     import AnimatedNumber from './AnimateNumber.vue'
-    import Dropdown from '../directives/Dropdown';
 
     export default {
       name: 'widgets',
@@ -350,9 +349,6 @@
             InfoChartTwo,
             BasixCounter: AnimatedNumber,
             Dropdown
-         },
-        directives: {
-            dropdown: Dropdown
         }
     }
 </script>

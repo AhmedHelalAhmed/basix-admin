@@ -152,20 +152,10 @@ export default {
                     icon: 'fa fa-map-o'
                   },
                   {
-                    name: 'Bubble Maps',
-                    url: '/components/maps/bubble-maps',
-                    icon: 'fa fa-globe'
-                  },
-                  {
                     name: 'Leaflet Maps',
                     url: '/components/maps/leaflet-maps',
                     icon: 'fa fa-street-view'
-                  },
-                  {
-                    name: 'Line Maps',
-                    url: '/components/maps/line-maps',
-                    icon: 'fa fa-map-signs'
-                  },
+                  }
       ]
     },
     {

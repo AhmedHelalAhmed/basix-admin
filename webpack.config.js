@@ -59,11 +59,22 @@ module.exports = {
           'sass-loader?indentedSyntax'
         ],
       },
+      
+      // {
+      //   test: /\.js$/,
+      //   loader: 'babel-loader',
+      //   exclude: /node_modules/
+      // },
+
       {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/
+        test: /\.es6$/,
+        exclude: /node_modules/,
+        loader: 'babel',
+        query: {
+          presets: ['es2015']
+        }
       },
+
       {
         test: /.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
         loader: 'file-loader',

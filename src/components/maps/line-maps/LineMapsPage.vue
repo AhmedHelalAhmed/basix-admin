@@ -8,7 +8,7 @@
 
 <script>
   import LineMap from './LineMap.vue';
-  import LineMapData from './LineMapData';
+  import LineMapData from './LineMapData.js';
 
   export default {
     name: 'line-maps-page',
